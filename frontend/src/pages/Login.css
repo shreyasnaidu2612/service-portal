@@ -1,0 +1,82 @@
+/* General styles for the page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../assets/background.png') no-repeat center center/cover;
+    color: #333;
+  }
+  
+  /* Login container to center-align the form */
+  .login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Login form styling */
+  .login-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+  }
+  
+  /* Logo in the login form heading */
+  .login-form h1 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #ff6b01;
+    background: url('../assets/mainlogo.png') no-repeat center top;
+    background-size: 80px; /* Adjust the size of the logo */
+    padding-top: 100px; /* Adjust padding for logo spacing */
+  }
+  
+  /* Input fields */
+  .login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Submit button */
+  .login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b01;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-form button:hover {
+    background-color: #e65a00;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Forgot password link */
+  .forgot-password {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .forgot-password:hover {
+    color: #ff6b01;
+  }
+  
