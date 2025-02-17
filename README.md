@@ -99,3 +99,8 @@ npm start
 |-------|---------------------|----------|
 | Admin | admin@example.com  | admin123 |
 | User  | user@example.com   | user123  |
+
+## 🚀 Live Demo
+🔗 **Frontend:** --> https://service-portal-shreyasnaidu2612-shreyas-naidus-projects.vercel.app <--  
+🔗 **Backend API:** --> https://service-portal-9yzd.onrender.com <--
+
