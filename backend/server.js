@@ -91,4 +91,8 @@ app.get("/", (req, res) => {
 // ✅ Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
+// ✅ Default route to confirm server is
+});
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running!");
 });
