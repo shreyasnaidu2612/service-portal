@@ -78,9 +78,8 @@ app.put("/requests/:id", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
-// ✅ Default route to confirm server is running
+// ✅ Default route to confirm server is
+});
 app.get("/", (req, res) => {
   res.send("✅ Backend is running!");
-});
-
 });
