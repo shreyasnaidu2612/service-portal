@@ -8,7 +8,14 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// ✅ Enable CORS for frontend URL (update this with your frontend URL)
+const corsOptions = {
+  origin: ["https://service-portal-shreyasnaidu2612-shreyas-naidus-projects.vercel.app"], // Allow only frontend requests
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization"
+};
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // ✅ Connect to MongoDB
@@ -76,10 +83,12 @@ app.put("/requests/:id", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-// ✅ Default route to confirm server is
-});
+// ✅ Default route to confirm server is running
 app.get("/", (req, res) => {
   res.send("✅ Backend is running!");
+});
+
+// ✅ Start server
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
