@@ -29,7 +29,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/requests");
+        const response = await axios.get("https://service-portal-9yzd.onrender.com/requests");
         setRequests(response.data);
       } catch (error) {
         console.error("Error fetching requests:", error);
@@ -57,7 +57,7 @@ const Dashboard = () => {
       };
 
       try {
-        const response = await axios.post("http://localhost:5000/requests", newReq);
+        const response = await axios.post("https://service-portal-9yzd.onrender.com/requests", newReq);
         setRequests([...requests, response.data]);
         setNewRequest("");
         setScreenshot(null);
@@ -72,7 +72,7 @@ const Dashboard = () => {
     const description = prompt("Please enter a resolution description:");
     if (description) {
       try {
-        await axios.put(`http://localhost:5000/requests/${id}`, {
+        await axios.put(`https://service-portal-9yzd.onrender.com/requests${id}`, {
           status: "Resolved",
           description,
           date: new Date().toISOString().split("T")[0],
